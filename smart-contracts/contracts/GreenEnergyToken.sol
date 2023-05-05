@@ -1,4 +1,4 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "./StandardERC20.sol";
@@ -9,17 +9,13 @@ import "./StandardERC20.sol";
 /// @dev Implements the ERC20 Contract
 contract GreenEnergyToken is StandardERC20{
 
-    /// @notice Stores the current state of carbon emissions from a company
-    /// @dev State varible to track the company's footprint
+    // State variable to track the company's footprint
     mapping(address => uint) footprintGenerated;
     
-    /// @notice Store the approved IOT devices of a company
-    /// @dev State varible to track the company's iot address
+    // State variable to track the company's iot address
     mapping(address=>address) approvedIot;
     
-    /// @notice State variable for address of contract owner
-    /// @dev address of the contract owner
-    /// @return Address of the contract owner
+    // Address of the contract owner
     address public owner;
     
     /// @notice Constructor of contract
