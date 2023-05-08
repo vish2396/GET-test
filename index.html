@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <head>
         <meta charset="utf-8" />
-        <title>Webpack App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My Green Energy Tracker</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Welcome to My Green Energy Tracker</h1>
+            <p>Track your energy consumption and reduce your carbon footprint!</p>
+        </main>
+        <footer>
+            <p>&copy; 2023 My Green Energy Tracker</p>
+        </footer>
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("service-worker.js")
+                        .then((registration) => {
+                            console.log("Service Worker registered: ", registration);
+                        })
+                        .catch((registrationError) => {
+                            console.error("Service Worker registration failed: ", registrationError);
+                        });
+                });
+            }
+        </script>
     </body>
-    
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker
-                    .register("service-worker.js")
-                    .then((registration) => {
-                        console.log("Service Worker registered: ", registration);
-                    })
-                    .catch((registrationError) => {
-                        console.error("Service Worker registration failed: ", registrationError);
-                    });
-            });
-        }
-    </script>
 </html>
