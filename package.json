@@ -60,7 +60,7 @@
     "@types/next": "^9.0.0",
     "@types/react": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "webpack": "^4.46.0",
+    "webpack": "^5.72.1",
     "webpack-dev-server": "^4.0.0"
   }
 }
